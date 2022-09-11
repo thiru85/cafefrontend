@@ -2,7 +2,7 @@ const axios = require('axios');
 const { response } = require('express');
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 80;
 const os = require('os');
 const hostname = os.hostname();
 var coffeeType, coffeeSize, coffeeContainer, cakeSize, cakeType, cakeContainer;
@@ -10,8 +10,8 @@ var coffeeType, coffeeSize, coffeeContainer, cakeSize, cakeType, cakeContainer;
 app.get('/', (req, res) => {
     
     Promise.all([
-                axios.get("coffeeapi"),
-                axios.get("cakeapi")])
+                axios.get("http://coffeeapi/"),
+                axios.get("http://cakeapi/")])
     .then(response => {
         //console.log("you desperately need a " + response.data.coffeeType);
         coffeeType = response[0].data.coffeeType;
@@ -53,5 +53,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {    
-    console.log("Listening on 3000")
+    console.log("Listening on 80")
 });
