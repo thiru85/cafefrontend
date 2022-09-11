@@ -1,0 +1,24 @@
+{
+  "name": "cafefrontend",
+  "version": "1.0.0",
+  "description": "This is a front-end demo application for demos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiru85/cafefrontend.git"
+  },
+  "author": "Thirumalai Aiyalu (Thiru)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiru85/cafefrontend/issues"
+  },
+  "homepage": "https://github.com/thiru85/cafefrontend#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  }
+}
