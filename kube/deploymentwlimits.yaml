@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cafefrontend
+  name: cafefrontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cafefrontend
+  template:
+    metadata:
+      labels:
+        app: cafefrontend
+    spec:
+      containers:
+      - image: 081324788528.dkr.ecr.us-east-1.amazonaws.com/cafefrontend:latest
+        name: cafefrontend
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: 200m
+          requests:
+            cpu: 100m
